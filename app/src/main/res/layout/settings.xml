@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<!--    用于参数的设置 ...... -->
+</LinearLayout>
+
+<!--
+参考：https://blog.csdn.net/PlanZ/article/details/51150919
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="80dip"
+        android:layout_marginStart="20dip"
+        android:layout_marginLeft="20dip">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="密       码："
+            />
+        <EditText
+            android:layout_width="220dp"
+            android:inputType="textPassword"
+            android:layout_height="wrap_content"
+            android:id="@+id/secret"
+             />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dip"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="确认密码："
+            android:layout_marginStart="20dip"
+            android:layout_marginLeft="20dip"
+            />
+
+
+
+        <EditText
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:id="@+id/confirmSecret" />
+    </LinearLayout>
+
+</LinearLayout>
+
+2、使用该布局文件并创建AlertDialog：
+
+//定义一个自定义对话框
+AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("设置密码");//设置标题
+                View view = LayoutInflater.from(this).inflate(R.layout.activity_set_secret,null);//获得布局信息
+                final EditText secret = (EditText) view.findViewById(R.id.secret);
+                final EditText confirmSecret = (EditText) view.findViewById(R.id.confirmSecret);
+                builder.setView(view);//给对话框设置布局
+                builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        //点击确定按钮的操作
+                    }
+                });
+                builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+                builder.show();
+————————————————
+版权声明：本文为CSDN博主「PlanZ」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/PlanZ/article/details/51150919
+-->

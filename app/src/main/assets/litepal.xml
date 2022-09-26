@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <!--数据库名称-->
+    <dbname value="testlitepal" />
+    <!--数据库版本-->
+    <version value="1" />
+
+    <!--映射模型-->
+    <list>
+        <!--添加实体类，此处必须映射完整路径-->
+        <mapping class="com.example.icross.HistoryItem" />
+    </list>
+</litepal>
